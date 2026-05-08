@@ -3,40 +3,45 @@ using namespace std;
 
 int main() {
     double a, b, result;
-    char operation;
+    char op;
 
-    cout << "Enter first number: ";
+    cout << "Please input the first number: ";
     cin >> a;
-    cout << "Enter operator (+, -, *, /): ";
-    cin >> operation;
-    cout << "Enter second number: ";
+
+    cout << "Please input the operator: ";
+    cin >> op;
+
+    cout << "Please input the second number: ";
     cin >> b;
 
-    switch(operation) {
+    switch (op) {
         case '+':
             result = a + b;
+            cout << "The result is: " << result << endl;
             break;
+
         case '-':
             result = a - b;
+            cout << "The result is: " << result << endl;
             break;
+
         case '*':
             result = a * b;
+            cout << "The result is: " << result << endl;
             break;
+
         case '/':
-            if(b != 0) {
+            if (b != 0) {
                 result = a / b;
-            } 
-            else
-            {
-                cout << "Error: Division by zero is not allowed." << endl;
-                return 1;
+                cout << "The result is: " << result << endl;
+            } else {
+                cout << "Error: division by zero" << endl;
             }
             break;
+
         default:
-            cout << "Error: Invalid operator. " << endl;
-            return 1;
+            cout << "Invalid operator" << endl;
     }
 
-    cout << "Result: " << result << endl;
     return 0;
 }
